@@ -13,7 +13,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'my-mariadb', usernameVariable: 'DB_USER', passwordVariable: 'DB_PASS')]) {
                         sh """
                         echo 'Running SQL Query...'
-                        mysql -h $DB_HOST -u $DB_USER -p$DB_PASS $DB_NAME -e "SELECT * FROM fruits LIMIT 10;"
+                        mysql -h $DB_HOST -u $DB_USER -p$DB_PASS $DB_NAME -e "SELECT * FROM fruits;"
                         """
                     }
                 }
