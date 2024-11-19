@@ -9,9 +9,7 @@ DB_NAME = 'fruitdb'
 # Define SQL queries
 QUERY1="SELECT COUNT(*) FROM fruits;"
 QUERY2="SELECT * FROM fruits LIMIT 5;"
-QUERY3="SHOW TABLES;"
 
 # Execute the queries
 mysql -h $DB_HOST -u $DB_USER -p$DB_PASSWORD $DB_NAME -e "$QUERY1" > query_1_results.txt
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASSWORD $DB_NAME -e "$QUERY2" > query_1_results.txt
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASSWORD $DB_NAME -e "$QUERY3" > query_1_results.txt
+mysql -h $DB_HOST -u $DB_USER -p$DB_PASSWORD $DB_NAME -e "$QUERY2" > query_2_results.txt

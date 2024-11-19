@@ -13,7 +13,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'my-mariadb', usernameVariable: 'DB_USER', passwordVariable: 'DB_PASS')]) {
                         sh '''
                         echo 'Running SQL Connection...'
-                        mysql -h $DB_HOST -P 3306 -u $DB_USER -p$DB_PASS fruitdb -e "SELECT * FROM fruits;" > query_results.txt
+                        mysql -h $DB_HOST -P 3306 -u $DB_USER -p$DB_PASS fruitdb -e "SHOW TABLES;" > query_test_results.txt
                         '''
                     }
                 }
