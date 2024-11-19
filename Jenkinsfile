@@ -19,9 +19,7 @@ pipeline {
                 }
             }
         }
-    }
-
-      stages {
+        
         stage('Run Queries') {
             steps {
                 script {
